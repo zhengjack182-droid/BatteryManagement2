@@ -30,9 +30,17 @@ def load_settings():
         return json.load(f)
 
 def save_settings(settings):
-    with open(SETTINGS_FILE, "w") as f:
-        json.dump(settings, f, indent=4)
-
+    # This check detects if the code is running in the Vercel cloud
+    if os.environ.get("VERCEL"):
+        print("Vercel detected: Skipping file write to prevent crash.")
+        return # Exit the function early without writing
+    
+    # This only runs on your local computer
+    try:
+        with open(SETTINGS_FILE, "w") as f:
+            json.dump(settings, f, indent=4)
+    except Exception as e:
+        print(f"Local save error: {e}")
 @app.get("/")
 async def read_index():
     return FileResponse("static/index.html")
