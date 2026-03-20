@@ -1,0 +1,58 @@
+{
+    "B0005": {
+        "Cycle Count": 357,
+        "SoC": 64.6642778944391,
+        "SoH": 92.69,
+        "Average Voltage": 4,
+        "Average Power": 7,
+        "Voltage Sag": 0,
+        "Temperature \u0394T": 7.69416379677965,
+        "Internal Resistance": "Moderate Resistance",
+        "Temperature Status": "Normal",
+        "Overall Status": "Healthy",
+        "RUL Days": 1107,
+        "Predicted Failure Day": 1464
+    },
+    "B0006": {
+        "Cycle Count": 466,
+        "SoC": 60.36404429558676,
+        "SoH": 87.03,
+        "Average Voltage": 4,
+        "Average Power": 7,
+        "Voltage Sag": 0,
+        "Temperature \u0394T": 10.292098780121417,
+        "Internal Resistance": "Moderate Resistance",
+        "Temperature Status": "Normal",
+        "Overall Status": "Healthy",
+        "RUL Days": 612,
+        "Predicted Failure Day": 1078
+    },
+    "B0007": {
+        "Cycle Count": 478,
+        "SoC": 52.03853819921148,
+        "SoH": 67.74,
+        "Average Voltage": 4,
+        "Average Power": 6,
+        "Voltage Sag": 0,
+        "Temperature \u0394T": 12.778267003353731,
+        "Internal Resistance": "Moderate Resistance",
+        "Temperature Status": "Normal",
+        "Overall Status": "Replace Soon",
+        "RUL Days": -33,
+        "Predicted Failure Day": 445
+    },
+    "B0018": {
+        "Cycle Count": 768,
+        "SoC": 39.38367572006921,
+        "SoH": 40.03,
+        "Average Voltage": 3,
+        "Average Power": 6,
+        "Voltage Sag": 0,
+        "Temperature \u0394T": 15.43835491690651,
+        "Internal Resistance": "High Resistance Risk",
+        "Temperature Status": "Normal",
+        "Overall Status": "Replace Soon",
+        "RUL Days": -384,
+        "Predicted Failure Day": 384
+    }
+}

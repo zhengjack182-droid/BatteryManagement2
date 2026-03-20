@@ -1,0 +1,9 @@
+{
+    "power_draw_mode": "health-prioritized",
+    "charge_limits": {
+        "B0005": 20,
+        "B0006": 0,
+        "B0007": 20,
+        "B0018": 20
+    }
+}
