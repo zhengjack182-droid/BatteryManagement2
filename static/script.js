@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderChartsFirstTime();
             } else {
                 // Just update settings but don't overwrite fluctuating SoC/Temp
-                dashboardData.settings = data.settings;
+                //dashboardData.settings = data.settings;
             }
 
             renderDashboard();
