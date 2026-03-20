@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Health Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for Maintenance Tab -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>Power Station <span class="highlight">Monitor</span></h1>
+            </div>
+            
+            <!-- Tab Ribbon -->
+            <nav class="tab-ribbon">
+                <button class="tab-btn active" data-tab="battery">Battery</button>
+                <button class="tab-btn" data-tab="maintenance">Maintenance</button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Battery Tab -->
+            <section id="battery-tab" class="tab-content active">
+                
+                <!-- Power Output Mode Bar -->
+                <div class="top-control-bar">
+                    <div class="control-left">
+                        <span class="control-label">Power Output Mode:</span>
+                        <div class="power-mode-list">
+                            <label class="pm-radio">
+                                <input type="radio" name="power_draw_mode" value="balanced" checked>
+                                <span class="pm-text">Load Balance</span>
+                            </label>
+                            <label class="pm-radio">
+                                <input type="radio" name="power_draw_mode" value="custom">
+                                <span class="pm-text">Custom Selection</span>
+                            </label>
+                            <label class="pm-radio">
+                                <input type="radio" name="power_draw_mode" value="health-prioritized">
+                                <span class="pm-text">Health-Prioritized</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="control-center">
+                        <span class="auto-draining-text">Auto-draining active & healthy tanks</span>
+                    </div>
+                    
+                    <div class="control-right">
+                        <button class="start-system-btn">Start System Power</button>
+                    </div>
+                </div>
+
+                <!-- Battery Grid -->
+                <div class="battery-grid" id="battery-grid">
+                    <!-- JavaScript will inject battery cards here -->
+                </div>
+            </section>
+
+            <!-- Maintenance Tab -->
+            <section id="maintenance-tab" class="tab-content">
+                <div class="maintenance-header">
+                    <h2>Predictive Maintenance Overview</h2>
+                    <p class="subtitle">Monitor lifecycle and track degradation</p>
+                </div>
+                
+                <div class="maintenance-grid" id="maintenance-grid">
+                    <!-- JavaScript will inject maintenance cards here -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- AI Analytics Modal -->
+    <div id="ai-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3><span class="warning-icon">⚠️</span> AI Analytics Alert</h3>
+            </div>
+            <div class="modal-body" id="ai-modal-message">
+                <!-- Message injected by JS -->
+            </div>
+            <div class="modal-actions">
+                <button id="ai-modal-dismiss" class="btn btn-secondary">Dismiss</button>
+                <button id="ai-modal-approve" class="btn btn-primary">Approve & Auto-Fix</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
